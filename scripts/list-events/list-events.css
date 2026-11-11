@@ -1,0 +1,28 @@
+.event-list {
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.event-list .mdc-card__primary-action {
+  display: flex;
+  flex-direction: column;
+}
+.event-list .mdc-card__media {
+  background-size: cover;
+  background-position: center;
+  height: 0;
+  
+}
+
+.event-list .event-content {
+  padding: 16px;
+}
+
+
+.event-list .event-content {
+  padding: 16px;
+}
+
+.event-list .mdc-card__actions {
+  justify-content: flex-end;
+}

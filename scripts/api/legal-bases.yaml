@@ -1,0 +1,42 @@
+paths:
+  list:
+    get:
+      summary: List all legal bases
+      description: Retrieves all legal bases with translations based on the Accept-Language header
+      operationId: listLegalBases
+      tags:
+        - Legal Bases
+      parameters:
+        - in: header
+          name: Accept-Language
+          schema:
+            type: string
+            example: en
+          description: Language code for translations
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LegalBasis'
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden - insufficient permissions
+
+components:
+  schemas:
+    LegalBasis:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Internal name of the legal basis
+          example: consent
+        title:
+          type: string
+          description: Translated title of the legal basis
+          example: Consent

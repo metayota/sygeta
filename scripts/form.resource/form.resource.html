@@ -1,0 +1,17 @@
+<div class="metayota-form-resource">
+
+    <h2 if="this.label != undefined">{ this.label != undefined ? translate(this.label) : (this.resource ? this.resource.title : '') }</h2>
+    <p if="this.subtitle != null">{this.subtitle}</p>
+    <form (submit)="this.saveClicked()" autocomplete="{ this.autocomplete ? this.autocomplete : false }" target="{this.target ? this.target : '_self'}" element="form" method="{this.method}" action="{this.action}">
+        <design.resparameter hide_parameters="{this.hide_parameters}" readonly="{this.readonly}" showdocumentation="{this.showdocumentation}" documentation="{this.documentation}" (change)="this.changed(event)" element="parameterEl" tag="{this.resource}" value="{this.value}"></design.resparameter>
+        <div class="button-box">
+            <div if="this.submitlabel != null">
+                <loader loading="{this.showLoader}"></loader>
+                <form.button icon="{this.icon}" enabled="{this.enabled && (this.submited !== true)}" (click)="this.saveClicked()" label="{this.submitlabel != null ? translate(this.submitlabel) : translate('save')}"></form.button>
+            </div>
+            <div class="cancel-button" if="this.cancellabel != null">
+                <form.button enabled="{this.enabled}" (click)="this.cancelClicked()" label="{this.cancellabel}"></form.button>
+            </div>
+        </div>
+    </form>
+</div>

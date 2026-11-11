@@ -1,0 +1,21 @@
+/*img.emoji {
+    height: 1.5em;  
+    width: 1.5em;
+    vertical-align: middle;
+}*/
+
+.form-tinymce {
+    background-color: transparent;
+}
+.form-tinymce .form-label {
+    margin-bottom: 8px;
+    display: block;
+}
+
+.tox .tox-dialog {
+    z-index: 100;
+}
+
+.tox-silver-sink {
+    z-index: 10000 !important;
+}

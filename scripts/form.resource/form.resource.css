@@ -1,0 +1,31 @@
+.error-message {
+    color: #ce2323;
+}
+
+.element-documentation {
+    color: #555;
+}
+
+.j-settings .element-documentation {
+    color:#696262;
+}
+
+.button-box {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.button-box .form-button {
+    margin-right: 0px;
+}
+
+
+.cancel-button .form-button {
+    background: linear-gradient(0deg, #4c545b, #6b737a);
+    border: 1px solid #4d4d4d;
+}
+.cancel-button .form-button:hover {
+    background: linear-gradient(0deg, #41484e, #5a6167);
+    border: 1px solid #4d4d4d;
+}

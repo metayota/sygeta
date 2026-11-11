@@ -1,0 +1,18 @@
+schemas:
+
+  UserId:
+    type: integer
+    description: Internal Sygeta user ID.
+    example: 42
+
+  UserReference:
+    type: object
+    description: Minimal user reference info.
+    properties:
+      id:
+        type: integer
+      full_name:
+        type: string
+    example:
+      id: 42
+      full_name: "Admin User"

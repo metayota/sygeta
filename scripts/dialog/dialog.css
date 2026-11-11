@@ -1,0 +1,108 @@
+.dialog .visible {
+    display: block;
+}
+
+.dialog .dialog-bg {
+    background: rgba(0, 0, 0, 0.45);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 10000;
+}
+
+.dialog .button-box {
+    justify-content: flex-end;
+}
+
+.dialog.visible .modal-window {
+	display: block;
+}
+
+.dialog .modal-window {
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.dialog h2 {
+    margin-top:0px;
+}
+
+
+.modal-header {
+    position:relative;
+    width: 100%;
+}
+
+.modal-title {
+    padding: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    font-weight: bold;
+    color: black;
+}
+
+
+.modal-window {
+  	
+    background-color: #F7F9F9;
+    z-index: 10000;
+    position: fixed;
+    left: 50%;
+    margin-left: -360px;
+    width: 720px;
+    top: 132px;
+    border-radius: 12px;
+    /*background: #0e75b7;*/
+    /*color: white;*/
+    border: 5px solid white;
+}
+@media only screen and (max-width: 600px) {
+    .modal-window {
+        margin-left: 0px;
+        width: 100%;       
+        left: 0px;
+        right:0px;
+        top: 100px;
+    }
+}
+.modal-content {
+    padding: 16px;
+    color: black;
+}
+
+.modal-content .dropdown-form-element {
+    color: black;
+    border-color: black;
+}
+
+.modal-window.active {
+    display: block;
+}
+
+.modal-close {
+    position: absolute;
+    right: 24px;
+    font-family: Arial;
+    cursor: pointer;
+    top: 24px;
+}
+.modal-close img {
+	width: 14px;
+	height: 14px;
+}
+
+.modal-content {
+    padding: 16px;
+}
+
+.modal {
+    box-shadow: 2px 2px 3px rgba(0, 25, 50, 0.15);
+    border-top: 1px solid #eaeaea;
+    border-right: none;
+    border-bottom: none;
+    border-left: 1px solid #eaeaea;
+    background-color: #F7F9F9;
+}
+

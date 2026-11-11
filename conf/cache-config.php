@@ -1,0 +1,1 @@
+<?php $GLOBALS['cacheEnabled'] = true; ?>

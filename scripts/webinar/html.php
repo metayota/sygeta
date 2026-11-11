@@ -1,0 +1,1 @@
+<?php namespace Metayota; include_once('../metayota/library.php');  ?>

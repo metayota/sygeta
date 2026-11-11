@@ -1,0 +1,4 @@
+<div class="form-date">
+    <form.text label="{this.label}" value="{this.htmlValue}" (change)="this.dateChanged(event)" type="{this.type}"></form.text>
+    <p class="error-message" if="!!this.errorMessage">{this.errorMessage}</p>
+</div>

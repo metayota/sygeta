@@ -1,0 +1,2 @@
+<?php namespace Metayota; include_once('../metayota/library.php');  ?><h1><?= translate('login_as_user') ?></h1>
+<form.resource (submit)="this.login(event)" resourcetype="admin-login-as-user" submitlabel="<?= translate('login') ?>"></form.resource>

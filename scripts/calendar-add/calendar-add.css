@@ -1,0 +1,10 @@
+
+.calendar-add .parameters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 42px;
+}
+
+.calendar-add .parameters > div.parameter-name-description {
+    grid-column: 1 / span 2;
+}

@@ -1,0 +1,19 @@
+<div class="form-text form-box {this.class} {!!this.errorMessage ? 'has-error' : ''}"> 
+	<label if="this.label !== undefined" class="form-label">{translate(this.label)}</label>
+	<input 
+		name="{this.name}"
+        class="input-{this.type ? this.type : 'text'} form-element"
+		spellcheck="false" 
+		autocomplete="{this.autocomplete ?  this.autocomplete : 'off'}"
+		placeholder="{this.placeholder}" 
+		element="input" 
+		name="{this.name}" 
+		type="{this.type != 'undefined' ? this.type : 'text'}" 
+		value="{this.value}" 
+        maxlength="{this.maxlength}"
+		(blur)="this.isValid()"
+		(input)="this.resourceChanged(node.value)" 
+        (keypress)="this.keypress(event)"
+		readonly="{this.readonly}"/>
+</div>
+<p class="error-message" if="!!this.errorMessage">{this.errorMessage}</p>

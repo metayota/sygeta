@@ -1,0 +1,12 @@
+<div class="toast-container">
+  <div for="message of this.messages">
+    <div class="toast-message {message.cssClass}">
+        <b if="message.title">{message.title}</b>
+      <span>{translate(message.message)}</span>
+      <span class="toast-button" if="message.link != undefined && message.link != ''"><a element="confirm" (click)="this.gotoLink(message)">{translate(message.buttonName)}</a></span>
+      <span class="toast-button" if="message.isConfirm && (message.link == undefined || message.link == '')">
+        <a element="confirm" (click)="this.hide(message)">{this.getButtonName(message)}</a>
+      </span>
+    </div>
+  </div>
+</div>

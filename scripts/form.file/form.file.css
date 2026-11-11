@@ -1,0 +1,32 @@
+.form-file {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.form-file img {
+    max-width: 200px;
+    max-height: 80px;
+}
+
+
+.form-file label {
+    display: block;
+}
+
+.form-file .form-button {
+    margin-top: 4px;
+    margin-bottom: 0px;
+}
+
+.form-file .choose-file-btn {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1 1 auto;   /* allow grow + shrink */
+    min-width: 0;     /* REQUIRED for text-overflow inside flex */
+    max-width: fit-content;
+    white-space: nowrap;
+}
+
+.parameter-type-file  {
+    min-width: 0; /* avoid grid cell to grow*/
+}

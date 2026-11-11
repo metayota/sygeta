@@ -1,0 +1,60 @@
+.manage-documents .card {
+    padding: 0px;
+}
+
+.checklist .link {
+    text-decoration: underline;
+}
+
+.checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.checklist-item {
+    display: grid;
+    grid-template-columns: 43px 1fr 0.5fr;
+    gap: 20px;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.checklist-item:nth-child(odd) {
+    background: var(--component-color); 
+}
+
+.checklist-item a {
+    display: block;
+}
+
+.step-completed, .step-open {
+    background-color: #d8d8d8;
+    border: 1px solid #a2a2a2;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.checklist-done {
+    background-image: url(/images/icons/square-check-3.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 30px;
+    height: 30px;
+    border-radius: 12px;
+    margin-left: 20px;
+}
+
+.checklist-unchecked {
+    background-image: url(/images/icons/checkbox-unchecked.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 30px;
+    height: 30px;
+    border-radius: 12px;
+    margin-left: 20px;
+}

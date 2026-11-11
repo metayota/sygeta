@@ -1,0 +1,2 @@
+<?php namespace Metayota; include_once('../metayota/library.php');   include_once('../translation-service/translation-service.php');   include_once('../user-lib/user-lib.php');  ?><h1><?= translate('update_password_title') ?></h1>
+<form.resource element="passwordEl" resourcetype="change-password" submitlabel="<?= translate('update_password_btn') ?>" (submit)="this.changePassword(event)" showdocumentation="true"></form.resource>

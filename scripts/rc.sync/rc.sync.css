@@ -1,0 +1,13 @@
+.sync-resources .table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+
+.sync-resources .table td, .sync-resources .table th {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.resource-updated {
+    font-weight: bold;
+}

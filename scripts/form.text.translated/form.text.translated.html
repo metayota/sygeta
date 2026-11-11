@@ -1,0 +1,52 @@
+<div class="form-text-translatable {this.class}"> 
+	<label if="this.label !== undefined" class="form-label">{translate(this.label)} (<a (click)="this.toggleTranslationInfo()">{translate('field_translated')}</a>)</label>
+	<input 
+        if="!this.getUseTextarea()"
+		name="{this.name}"
+        class="input-{this.type ? this.type : 'text'} form-element"
+		spellcheck="false" 
+		autocomplete="{this.autocomplete == true ?  'on' : 'off'}"
+		placeholder="{this.placeholder}" 
+		element="input" 
+		name="{this.name}" 
+		type="{this.type != 'undefined' ? this.type : 'text'}" 
+		value="{this.translated_value}" 
+		(blur)="this.blur()"
+        (input)="this.resourceChanged(node.value)" 
+        (focus)="this.loadRecommended(node.value)"
+        (keypress)="this.keypress(event)"
+		readonly="{this.readonly}"/>
+    <textarea if="this.getUseTextarea()" name="{this.name}"
+        class="input-{this.type ? this.type : 'text'} form-element"
+		spellcheck="false" 
+		autocomplete="{this.autocomplete == true ?  'on' : 'off'}"
+		placeholder="{this.placeholder}" 
+		element="textarea" 
+		name="{this.name}" 
+		type="{this.type != 'undefined' ? this.type : 'text'}" 
+		value="{this.translated_value}" 
+		(blur)="this.blur()"
+		(input)="this.resourceChanged(node.value)" 
+        (focus)="this.focus()"
+        (keypress)="this.keypress(event)"
+		readonly="{this.readonly}"></textarea>
+    <p class="error-message" if="!!this.errorMessage">{this.errorMessage}</p>
+    <div class="translation-recommended" if="this.recommended != undefined && this.recommended.length > 0" for="rec of this.recommended">
+        <div (mousedown)="this.setTranslation(rec)">{rec.translation} <span class="translation-key">({rec.translation_key})</span></div>
+    </div>
+    <div element="translation_info" style="display:none;" class="translation-info">
+        <label if="!this.unique" class="form-label">{translate('translation_key')}</label>
+        <input if="!this.unique" type="text" (input)="this.translationKeyChanged(node.value)" value="{this.value}"/>
+        
+        <div for="other_language of this.other_languages">
+            <div if="!this.editable && !this.unique && other_language.translation != ''">
+                <p><b>{other_language.language_translated}:</b> {other_language.translation}</p>
+            </div>
+            <div if="this.editable || this.unique || other_language.translation == ''">
+                <label class="form-label">{other_language.language_translated}</label>
+                <input type="text" (input)="this.otherLanguageChanged(other_language, node.value)" value="{other_language.translation}"/>
+            </div>
+        </div>
+        <a target="_blank" href="/{translate('language_code')}/translator#key:{this.value}">{translate('show_in_translator')}</a>
+    </div>
+</div>

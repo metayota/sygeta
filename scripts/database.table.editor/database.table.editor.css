@@ -1,0 +1,84 @@
+.pages .form-button {
+    min-width: 30px;
+    min-height: 30px;
+    border-radius: 3px;
+    padding: 0px;
+}
+
+.database-editor table {
+    width: auto;
+    min-width: 100%;
+}
+
+.database-editor tr th:first-child {
+    width: 80px;
+}
+
+.database-editor td, .database-editor td .object-view-content {
+    font-weight: normal;
+}
+
+.pages .btn-container {
+    margin-right: 8px;
+}
+
+.database-editor table td, .database-editor table td .view-text-value {
+    max-width: 300px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.db-editor-row-actions {
+    display: flex;
+    gap: 12px;
+    gap: 0px;
+}
+.db-editor-row-actions > i {
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.db-editor-row-actions > i:active {
+    position: relative;
+    top: 1px;
+    left: 1px;
+}
+
+.db-editor-row-actions img {
+    filter: invert(1);
+    width: 19px;
+}
+
+.material .db-editor-row-actions img {
+    filter: none;
+}
+
+.material .db-editor-row-actions > i {
+    background-color: transparent;
+}
+
+.database-editor .object-view-parameter  {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.j-editor .database-editor table.table td {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.form-button.highlighted {
+    background: white;
+    color: black;
+}
+.tablenav.bottom {
+    margin-top: 12px;
+}

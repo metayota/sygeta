@@ -1,0 +1,2 @@
+<?php namespace Metayota; include_once('../metayota/library.php');  ?><h1>Kalender verwalten</h1>
+<database.table.editor show_description="{true}" table="calendar_event" resourcetype="calendar_event"></database.table.editor>

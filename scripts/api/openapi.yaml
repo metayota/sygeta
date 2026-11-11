@@ -1,0 +1,47 @@
+openapi: 3.0.3
+info:
+  title: Sygeta CRM API
+  version: 1.2.0
+
+servers:
+  - url: https://{domain}
+    variables:
+      domain:
+        default: default.sygeta.com
+
+paths:
+
+  /api/v1/contacts:
+    $ref: "./contact.yaml#/paths/listCreate"
+
+  /api/v1/contacts/{id}:
+    $ref: "./contact.yaml#/paths/detail"
+
+  /api/v1/contact-groups:
+    $ref: "./contact_group.yaml#/paths/list"
+
+  /api/v1/legal-bases:
+    $ref: "./legal-bases.yaml#/paths/list"
+
+  /api/v1/contacts/{contact_id}/legal-bases:
+    $ref: "./contact-legal-bases.yaml#/paths/list"
+
+  /api/v1/contacts/{contact_id}/legal-bases/{id}:
+    $ref: "./contact-legal-bases.yaml#/paths/detail"
+
+  /api/v1/partners:
+    $ref: "./partner.yaml#/paths/list"
+
+security:
+  - bearerAuth: []
+  - sessionAuth: []
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+    sessionAuth:
+      type: apiKey
+      in: cookie
+      name: PHPSESSID

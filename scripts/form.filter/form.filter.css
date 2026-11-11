@@ -1,0 +1,207 @@
+.form-element-container {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.chosen-items {
+    display: flex;
+    gap: 12px;
+    row-gap: 5px;
+    flex-wrap: wrap;
+}
+
+.dropdown-filter {
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    display: inline-block;
+}
+
+.dropdown-filter label {
+    margin-bottom: 4px;
+    display: block;
+}
+
+.clear {
+    clear: both;
+}
+
+.default-option {
+    color: #808080;
+}
+
+.itemlist-container {
+    position: relative;
+}
+
+.filter-form-element {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 4px 8px;
+    outline: 0;
+    cursor: text;
+    background: #fff;
+    min-height: 36px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.filter-form-element:focus-within {
+    border-color: #4682e2;
+    box-shadow: 0 0 0 2px rgba(70, 130, 226, 0.2);
+}
+
+.filter-form-element.focus {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom: 0px;
+}
+
+.selected-items-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    min-height: 28px;
+}
+
+.selected-item-bubble {
+    display: inline-flex;
+    align-items: center;
+    background-color: #e3f2fd;
+    border: 1px solid #90caf9;
+    border-radius: 16px;
+    padding: 4px 8px;
+    font-size: 14px;
+    color: black;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.selected-item-bubble.selected {
+    background-color: #1976d2;
+    color: white;
+    border-color: #1976d2;
+}
+
+.selected-item-bubble:hover {
+    background-color: #bbdefb;
+}
+
+.selected-item-bubble.selected:hover {
+    background-color: #1565c0;
+}
+
+.bubble-text {
+    white-space: nowrap;
+}
+
+.bubble-remove {
+    margin-left: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 2px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 16px;
+    height: 16px;
+}
+
+.bubble-remove:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.filter-dropdown-search-input {
+    flex: 1;
+    min-width: 50px;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 2px;
+    background: transparent;
+}
+
+.filter-dropdown-search-input:empty:before {
+    content: attr(data-placeholder);
+    color: #999;
+    pointer-events: none;
+}
+
+.no-results-message {
+    padding: 8px 12px;
+    color: #666;
+    font-style: italic;
+    border: 1px solid #ddd;
+    border-top: none;
+    background: #f9f9f9;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.dropdown-placeholder {
+    color: gray;
+}
+
+.dropdown-options {
+    z-index: 1010;
+    display: none;
+    width: auto;
+    top: 0px;
+    max-height: 250px;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    overflow-y: auto;
+    cursor: pointer;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    min-width: calc(100% - 2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-options-visible {
+    display: block;
+}
+
+.dropdown-option {
+    width: auto;
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dropdown-filter .dropdown-option:hover {
+    background: #f0f0f0;
+}
+
+.dropdown-filter .dropdown-option.focus {
+    background: #2e88ce;
+    color: white;
+}
+
+.option-info {
+    color: #777;
+}
+
+.chosen-items {
+    display: contents; /* This makes bubbles act as direct children of the flex container */
+}
+
+.material .filter-form-element {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+

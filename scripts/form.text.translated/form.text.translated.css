@@ -1,0 +1,107 @@
+.form-text-translatable {
+	margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.input-box {
+    position: relative;
+}
+
+.autotranslate-button, .show-translations-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 26px;
+    padding: 0px;
+    right: 47px;
+}
+
+.show-translations-button {
+    right: 11px;
+}
+
+.autotranslate-button img {
+    width: 18px;
+    height: 18px;
+}
+
+.translation-info {
+    border:1px solid gray;
+    background: #efefef;
+    padding:20px;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: white;
+}
+
+.form-text-translatable input {
+    color: black;
+	width: 100%;
+    box-sizing: border-box;
+	border: 1px solid black;
+	height: auto;
+	border-radius: 6px;
+	padding-left: 16px;
+	padding-right: 40px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	outline: 0;
+	cursor: pointer;
+    background: #f3f3f3;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.material .form-text-translatable input {
+    border: none;
+    background-color: transparent;
+    padding-right: 80px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.translation-info input {
+    margin-bottom: 10px;
+}
+
+.form-text-translatable input[readonly] {
+	color: #777;
+}
+
+
+
+.form-text-translatable label {
+	display: block;
+    margin-bottom: 4px;
+}
+
+/** textarea **/
+
+
+.form-text-translatable textarea {
+	width: 100%;
+    box-sizing: border-box;
+	border: 1px solid black;
+	height: 144px;
+	border-radius: 8px;
+	padding: 16px;
+	outline: 0;
+	cursor: pointer;
+	background:#f3f3f3;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.form-text-translatable textarea:focus {
+    border-color: #0a6ca9;
+}
+
+.material .form-text-translatable textarea {
+    background-color: white;
+    border: none;
+}

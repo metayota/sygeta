@@ -1,0 +1,42 @@
+class GetAddressbook extends Tag {
+    init() {
+        Tag.load('https://accounts.google.com/gsi/client').then(result => {
+
+        });
+        window.signInCallback = function (response) {
+            if (response.credential) {
+                var idToken = response.credential;
+
+                // request new access token
+                gapi.auth.authorize({
+                    'client_id': '321808927079-nkv8vf33sblhf6dhugbudipih38oc3k8.apps.googleusercontent.com',
+                    'scope': 'https://www.googleapis.com/auth/contacts.readonly',
+                    'immediate': true
+                }, function(tokenResponse) {
+                    if (tokenResponse.error) {
+                        // handle error
+                    } else {
+                        fetchContacts(tokenResponse.access_token);
+                    }
+                });
+                alert(idToken)
+                /*resource.call({ 'id_token': idToken }).then(result => {
+                    window.location = '/login';
+                })*/
+            }
+        }
+    }
+
+    // Fetch contacts from People API
+    fetchContacts(accessToken) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://people.googleapis.com/v1/people/me/connections?personFields=names,emailAddresses');
+        xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
+        xhr.onload = function() {
+            console.log(xhr.response);
+        };
+        xhr.send();
+    }
+
+    // other methods...
+}

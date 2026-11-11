@@ -1,0 +1,31 @@
+.sales-pipeline-overview h3 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.visualize-step-action {
+    border-left: 4px solid #007bff;
+    background-color: #aac7e6;
+    padding: 15px;
+}
+
+.visualize-step-action th {
+    white-space: nowrap;
+    padding-right: 30px;
+    text-align: left;
+}
+
+.visualize-mail-subject {
+    display: block;
+    background: white;
+    max-width: 670px;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.visualize-mail-content {
+    max-width: 670px;
+    padding: 15px;
+    background-color: white;
+}

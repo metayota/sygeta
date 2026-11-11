@@ -1,0 +1,10 @@
+.event-detail {
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.invitation-link-box input {
+    width: 500px;
+}

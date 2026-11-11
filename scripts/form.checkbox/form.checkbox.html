@@ -1,0 +1,7 @@
+<div class="form-checkbox checkbox {this.value ? 'selected' : ''} {this.class}">
+    <input type="hidden" name="{this.name}" value="Yes" if="!!this.value"/>
+	<div (keydown)="this.keydown(event)" tabindex="0" (click)="this.check()" class="form-element form-element-checkbox  {this.value ? 'selected' : ''}"></div>
+    <label (click)="this.check()" if="this.label !== undefined and (this.htmllabel == undefined || this.htmllabel == '')" class="form-label">{translate(this.label)}</label>
+	<label (click)="this.check()" if="this.htmllabel !== undefined" class="form-label" element="labelel"></label>
+    <p class="error-message" if="!!this.errorMessage">{this.errorMessage}</p>
+</div>

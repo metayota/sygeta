@@ -1,0 +1,19 @@
+schemas:
+
+  Timezone:
+    type: string
+    description: >
+      A valid IANA timezone identifier.
+      Example values: Europe/Berlin, Africa/Johannesburg,
+      America/New_York, Asia/Shanghai.
+    example: "Europe/Berlin"
+
+  TimezoneList:
+    type: array
+    description: List of supported IANA timezones.
+    items:
+      type: string
+    example:
+      - Europe/Berlin
+      - Africa/Johannesburg
+      - Asia/Tokyo

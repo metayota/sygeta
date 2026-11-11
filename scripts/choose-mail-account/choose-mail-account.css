@@ -1,0 +1,63 @@
+.email-accounts-grid {
+    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #d0d0d0;
+}
+
+.account-cards {
+    display: flex;
+    
+    gap: 1.5rem;
+    
+}
+
+.account-card {
+    background: var(--surface-color, #ffffff);
+    border-radius: 0.5rem;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    display: flex
+;
+    align-items: center;
+    gap: 10px;
+}
+
+.account-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.account-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: var(--text-primary, #333333);
+}
+
+.account-email {
+    font-size: 1rem;
+    color: var(--text-secondary, #666666);
+}
+
+.no-accounts {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-secondary, #666666);
+    font-size: 1.125rem;
+}
+
+@media (max-width: 600px) {
+    .email-accounts-grid {
+        padding: 1rem;
+    }
+    
+    .account-cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}

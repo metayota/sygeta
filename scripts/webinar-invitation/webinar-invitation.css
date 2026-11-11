@@ -1,0 +1,31 @@
+.event-success {
+    background-color: #15a84b;
+    background: linear-gradient(178deg, #17be54 0%, #15a84b 100%);
+    border: 1px solid #109240;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 2px #033e18;
+    color: white;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 7px;
+    margin-top: 15px;
+}
+
+.event-invitation .parameters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+}
+
+.event-invitation .parameters :first-child {
+    grid-column: 1 / span 2;
+}
+
+@media (max-width:100px) {
+    .event-invitation .parameters {
+        grid-template-columns: 1fr 1fr;
+    }
+    .event-invitation .parameters :first-child { 
+        grid-column: 1;
+    }
+}

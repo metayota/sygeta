@@ -1,0 +1,65 @@
+.pipeline-steps {
+    margin-top: 20px;
+}
+
+.step-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.contact-card {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    margin-top: 20px;
+    padding: 36px;
+}
+
+.contact-card h1:first-child {
+    margin-top: -16px;
+}
+
+.contact-card-shortinfo {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 0px;
+    flex-wrap: wrap;
+}
+
+.contact-card-shortinfo span {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.contact-card-shortinfo span:not(:last-child)::after {
+    content: "•";
+    font-size: 20px;
+    margin-left: 20px;
+    color: #000;
+}
+
+.contact-card h1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-card h1 span {
+    font-size: 18px;
+    
+}
+/*
+.contact-card h1 span:not(:last-child)::after {
+    content: "•";
+    font-size: 20px;
+    margin-left: 20px;
+    color: #000;
+}*/
+
+.additional-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}

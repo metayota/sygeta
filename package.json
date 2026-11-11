@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "signature_pad": "^5.1.2",
+    "tinymce": "^8.0.2"
+  }
+}

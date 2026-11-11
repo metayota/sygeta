@@ -1,0 +1,65 @@
+.four-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 32px;
+}
+.color-card-blue, .color-card {
+    background-color: #d4763a; /* vibrant burnt orange */
+    color: white;
+    padding: 16px;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+}
+
+.color-card-color-2 {
+    background-color: #c9547a; /* vibrant rose */
+}
+
+.color-card-color-3 {
+    background-color: #7db84d; /* bright lime green */
+}
+
+.color-card-color-4 {
+    background-color: #9c4fb8; /* rich purple */
+}
+
+.color-card-color-5 {
+    background-color: #3891c4; /* bright ocean blue */
+}
+
+.color-card-color-6 {
+    background-color: #e85a4f; /* vibrant coral red */
+}
+
+.color-card-color-7 {
+    background-color: #4a7cc7; /* bright royal blue */
+}
+
+.color-card-color-8 {
+    background-color: #c4a032; /* rich golden yellow */
+}
+
+.color-card p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.color-card h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.color-card h2 {
+    margin-top: 0px;
+    font-size: 38px;
+}
+
+.four-cards .icon {
+    margin-left: auto;
+}
+
+.color-card a {
+    color: white;
+    text-decoration: underline;
+}

@@ -1,0 +1,9 @@
+.user-profile-form .parameters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+}
+
+.user-profile-form .parameters div:nth-child(3n) {
+    grid-column: 1 / span 2;
+}

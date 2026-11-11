@@ -1,0 +1,296 @@
+.sales-document-detail {
+    max-width: 633px;
+
+    margin: 0 auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 40px;
+    font-size: 13px;
+    margin-right: 10mm;
+    margin-right: auto;
+    margin-left: auto;
+    zoom: 1.2;
+    padding-left: 5mm;;
+    /*padding: 20mm;
+    padding-left: 25mm;*/
+    background-color: white;
+    font-weight: normal;
+    line-height: 150%;
+    border: 1px solid #cfcfcf;
+}
+.page-sales-document-detail-view main {
+    background: #f3f3f3;
+}
+
+.page-sales-document-detail-view .action-buttons {
+    background-color: white;
+}
+
+.sales-document-detail p {
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.sales-document-detail h1 {
+
+    font-weight: bold;
+    font-family: inherit;
+    font-size: inherit;
+    letter-spacing: 0.2px;
+}
+
+.document-^ {
+    margin-top: 42px;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.company-header {
+    margin-top: 7mm;
+    width: 86mm;
+}
+
+.company-info {
+
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.sender-line {
+    font-size: 11px;
+    height: 5mm;
+    font-size: 11px;
+    height: 5mm;
+    border-top: 1px solid black;
+    white-space: nowrap;
+}
+
+.two-column {
+    display: flex;
+
+}
+
+
+.info-block {
+    margin-left: auto;
+    font-size: 11px;
+    line-height: 1.4;
+    text-align: right;
+    margin-top: 12mm;
+    width: 76mm;
+}
+
+.document-header {}
+
+.document-header h1 {
+    color: #2c3e50;
+}
+
+.document-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 30px;
+    font-size: 0.9em;
+}
+
+.items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.items-table th {
+    background-color: #f8f9fa;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid black;
+    background-color: #ededed;
+    border-bottom: 2px solid black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.items-table tr:nth-child(2n) {
+    background-color: #efefef;
+}
+
+.items-table td b {
+    display: block;
+}
+
+.items-table td {
+    padding: 12px;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.items-table tfoot td {
+    font-weight: bold;
+
+}
+
+.document-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #90a6b3;
+}
+
+.payment-info {
+    font-size: 0.9em;
+    line-height: 1.4;
+    padding-right: 25px;
+}
+
+.payment-info h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.document-meta div:nth-child(1) {
+    text-align: left;
+}
+
+.document-meta div:nth-child(2) {
+    text-align: center;
+}
+
+.document-meta div:nth-child(3) {
+    text-align: right;
+}
+
+.sales-document-detail table {
+    margin-top: 18px;
+    font-size: 13px;
+    border-bottom: 1px solid black;
+}
+
+.sales-document-detail table td:last-child,
+.sales-document-detail table th:last-child {
+    text-align: right;
+}
+
+.document-meta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-intro-block {
+    font-size: 13px;
+    grid-column: 1 / span 2;
+}
+
+.info-block {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 35px;
+    row-gap: 3px;
+    font-size: 13px;
+    align-self: start;
+    position: relative;
+    right: -10mm;
+}
+
+.info-block div {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.info-block div:nth-child(even) {
+    font-size: 11px;
+}
+
+
+.info-intro-block {
+    margin-bottom: 8px;
+}
+
+.totals-grid {
+
+    display: grid;
+    grid-template-columns: 0.6fr 0.4fr;
+    margin-top: 20px;
+}
+
+.totals-subgrid {
+    
+    display: grid;
+    gap: 8px;
+}
+
+.totals-label {
+    font-weight: bold;
+}
+
+.payment-terms {
+    font-size: 11px;
+    padding-right: 40px;
+}
+
+.totals-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 8px;
+    padding: 3px;
+    /* border-top: 1px solid #ddd;*/
+}
+
+.totals-value {
+
+    text-align: right;
+    padding-left: 16px;
+}
+
+.total {
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+
+/* border-top: 2px solid #000;*/
+
+
+@media print {
+    .no-print {
+        display: none;
+    }
+}
+
+@media print {
+    .sales-document-detail {
+        max-width: none;
+        zoom: 1.0;
+        margin: 0px;
+   /*     margin-right: 10mm;
+        padding: 0mm;*/
+        background: transparent;
+        border: none;
+    }
+    .page-sales-document-detail-view main {
+        background: transparent;
+    }
+}
+
+.totals-grid + .document-content {
+    margin-top: 33px;
+}
+
+.print-preview {
+    text-align: center;
+}
+
+.print-preview img {
+    max-width: 80%;
+    border: 1px solid var(--border-color);
+    background-color: white;
+}
+
+.sales-document-detail.layout-din-5008-form-b {
+    padding-top: 38mm;
+}
+
+.company-header {
+    min-height: 45mm;
+ }

@@ -1,0 +1,13 @@
+<header >
+    <nav class="website-navigation" >
+        <nav class="admin" for="menu_item of this.menu">
+            <div class="{ this.activePage == menu_item.name || window?.router$?.params.tab == menu_item.name ? 'active' : ''}"><img src="/uploads/menu-icons/{menu_item.icon}"> <a (click)="this.clickedItem(menu_item)">{menu_item.title_translated}</a></div>
+        </nav>
+
+        <nav class="admin" if="!window?.loggedInUser$ || !loggedInUser$.username">
+            <a link="/register"><t>register</t></a>
+            <a link="/login"><t>login</t></a>
+        </nav>
+    </nav>
+    <when test="window?.loggedInUser$ && loggedInUser$" then="this.reload()"></when>
+</header>

@@ -1,0 +1,6 @@
+<div class="tab-container">
+	<div for="tab of this.tabs" class="tabs-box">
+		<div (click)="this.activateTab(node,tab)" class="tab-item { (tab.name == this.active) or (tab.value == this.active) ? 'active' : ''}">{tab.title ? tab.title : tab.name}</div>
+	</div>
+	<div if="!this.tabs || this.tabs.length == 0"><div class="tab-item no-tabs">No tabs</div></div>
+</div>

@@ -1,0 +1,2 @@
+<?php namespace Metayota; include_once('../metayota/library.php');   include_once('../translation-service/translation-service.php');   include_once('../invite-functions/invite-functions.php');  ?>
+<form.resource submitlabel="<?= translate('upload_addressbook_btn') ?>" (submit)="this.uploadAddressbook(event)" resourcetype="upload-addressbook"></form.resource>

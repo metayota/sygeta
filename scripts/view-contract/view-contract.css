@@ -1,0 +1,19 @@
+img.signature  {
+    max-height: 50px;
+}
+
+.view-contract, .view-contract p {
+    font-size: 13px;
+}
+
+.view-contract h1 {
+    font-size: 22px;
+}
+
+.view-contract h2 {
+    font-size: 19px;
+}
+
+.view-contract h3 {
+    font-size: 16px;
+}

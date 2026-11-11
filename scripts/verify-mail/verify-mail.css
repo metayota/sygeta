@@ -1,0 +1,6 @@
+.activate-mail form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}

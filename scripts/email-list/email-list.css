@@ -1,0 +1,18 @@
+.mail-message {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
+    
+    align-items: center;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+.mail-message > div:last-child {
+    text-align: right;
+}
+
+.mail-message b {
+    color: gray;
+    font-weight: normal;
+}

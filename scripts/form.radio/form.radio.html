@@ -1,0 +1,13 @@
+<div class="form-radio-container form-box form-box-transparent">
+    <label class="form-label" if="this.label !== undefined">{translate(this.label)}</label>
+    <input type="hidden" name="{this.name}" value="{this.value}" />
+    <div class="radio-items"  for="option of this.options">
+        <div (click)="this.select(option.value)" class="form-radio-box">
+            <div class="form-radio {(this.value != undefined) && this.value == option.value ? 'selected' : ''}">
+                <div class="form-radio-dot"></div>
+            </div>
+            <label if="option.name !== undefined" class="form-option-label">{translate(option.name)}</label>
+        </div>
+    </div>
+    <p class="error-message" if="!!this.errorMessage">{this.errorMessage}</p>
+</div>

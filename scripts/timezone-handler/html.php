@@ -1,0 +1,1 @@
+<?php namespace Metayota; include_once('../metayota/library.php');   include_once('../translation-service/translation-service.php');  ?><div><when test="window.timezone$ and timezone$" then="this.fire('change',window.timezone$)"></when><!-- timezone handler --></div>

@@ -1,0 +1,17 @@
+.status-badge.confirmed {
+    background-color: rgb(211, 228, 211);
+    border: 1px solid rgb(120, 192, 120);
+    color: rgb(54, 136, 54);
+    display: inline-block;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.status-badge.declined {
+    background-color: rgb(228, 211, 211);
+    border: 1px solid rgb(208, 60, 60);
+    color: rgb(208, 60, 60);
+    display: inline-block;
+    padding: 10px;
+    border-radius: 8px;
+}

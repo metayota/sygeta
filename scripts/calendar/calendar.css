@@ -1,0 +1,343 @@
+.event-calendar .tab-container {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.event-calendar .button-box {
+    margin-bottom: 30px;
+}
+
+.calendar-image {
+    width: 100%;
+}
+
+.day-short {
+    display: none;
+}
+
+.selected-event h2 {
+    margin-bottom: 20px;
+}
+
+.selected-event-date {
+    display: flex;
+    gap: 24px;
+}
+
+.selected-event-venue {
+    display: flex;
+    gap: 24px;
+}
+
+@media (max-width:850px) {
+
+    .selected-event-date,
+    .selected-event-venue {
+        flex-direction: column;
+        row-gap: 0px;
+    }
+}
+
+.calendar {
+    margin-bottom: 24px;
+    background: var(--component-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+div.days>div:first-child, div.days>div.weekday:first-child, div.days>div:nth-child(14n+1) {
+    border-left: none;
+}
+
+div.days>div:nth-child(7n+1) {
+    border-left: none;
+}
+
+div.days>div:nth-child(14n), div.days>div.weekday:nth-child(14n), div.days>div:nth-child(14n) {
+    border-right: none;
+}
+
+div.days>div:nth-child(7n), div.days>div.weekday:nth-child(13n) {
+    border-right: none;
+}
+
+.tab-item.active {
+    border: 1px solid var(--primary-border-color);
+    /*font-size: 20px;*/
+    border: 1px solid var(--border-color);
+}
+
+.selected-event a.form-button {
+    border: none;
+    background-color: #E0E0E0;
+    text-decoration: none;
+    color: black;
+    padding: 12px 24px;
+    border-radius: 24px;
+}
+
+.app .event-green a.form-button:hover {
+
+    color: white;
+}
+
+.selected-event {
+    border: none;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: var(--component-color);
+    border: 1px solid var(--border-color);
+}
+
+.selected-event a {
+
+    text-decoration: none;
+}
+
+.selected-event h2 {
+    margin-top: 0px;
+}
+
+.calendar>div.days,
+.weekdays {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+div.days>div,
+div.days>div.weekday {
+    padding: 12px;
+    font-size: 18px;
+    border: 1px solid var(--border-color);
+    border-left: none;
+    border-bottom: none;
+}
+
+div.days>div.weekday.day-long {
+    border-top: none;
+}
+
+div.days>div {
+    font-size: 24px;
+    text-align: right;
+}
+
+.weekday {
+    font-weight: bold;
+}
+
+.calendar .not-in-month {
+    color: #9E9E9E;
+}
+
+.calendar .sunday {
+    color: #EF5350;
+}
+
+.calendar .sunday.not-in-month {
+    color: #FFCDD2;
+}
+
+.calendar-event {
+    font-size: 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    padding: 6px;
+    margin-top: 8px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.calendar-event-time {
+    text-decoration: none;
+}
+
+@media (max-width: 1050px) {
+    .day-short {
+        display: block;
+    }
+
+    .day-long {
+        display: none;
+    }
+}
+
+@media (max-width: 1050px) {
+
+    .calendar-event-time,
+    .calendar-event>div {
+        display: none;
+    }
+
+    .calendar-event {
+        width: 36px;
+        height: 36px;
+        padding: 0px;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width: 550px) {
+
+    div.days>div,
+    div.days>div.weekday {
+        font-size: 16px;
+    }
+
+    .calendar-event {
+        width: 24px;
+        height: 24px;
+    }
+}
+/* Color definitions */
+/* Color definitions */
+.calendar-event.color-green-1,
+.selected-event.color-green-1 {
+    background: #C8E6C9;
+    color: black;
+    border: 1px solid #81C784;
+}
+
+.calendar-event.color-green-2,
+.selected-event.color-green-2 {
+    background: #A5D6A7;
+    color: black;
+    border: 1px solid #66BB6A;
+}
+
+.calendar-event.color-orange,
+.selected-event.color-orange {
+    background: #FFCC80;
+    color: black;
+    border: 1px solid #FF9800;
+}
+
+.calendar-event.color-red-1,
+.selected-event.color-red-1 {
+    background: #EF9A9A;
+    color: black;
+    border: 1px solid #E53935;
+}
+
+.calendar-event.color-red-2,
+.selected-event.color-red-2 {
+    background: #E57373;
+    color: black;
+    border: 1px solid #C62828;
+}
+
+.calendar-event.color-blue-1,
+.selected-event.color-blue-1 {
+    background: #90CAF9;
+    color: black;
+    border: 1px solid #2196F3;
+}
+
+.calendar-event.color-blue-2,
+.selected-event.color-blue-2 {
+    background: #64B5F6;
+    color: black;
+    border: 1px solid #1976D2;
+}
+
+.calendar-event.color-yellow,
+.selected-event.color-yellow {
+    background: #FFF59D;
+    color: black;
+    border: 1px solid #FDD835;
+}
+
+.calendar-event.color-brown-1,
+.selected-event.color-brown-1 {
+    background: #BCAAA4;
+    color: black;
+    border: 1px solid #795548;
+}
+
+.calendar-event.color-brown-2,
+.selected-event.color-brown-2 {
+    background: #A1887F;
+    color: black;
+    border: 1px solid #5D4037;
+}
+
+.calendar-event.color-gray-1,
+.selected-event.color-gray-1 {
+    background: #E0E0E0;
+    color: black;
+    border: 1px solid #9E9E9E;
+}
+
+.calendar-event.color-white-1,
+.selected-event.color-white-1 {
+    background: #F5F5F5;
+    color: black;
+    border: 1px solid #BDBDBD;
+}
+
+
+.selected-event-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.event-calendar .card {
+    flex: 1 1 200px;
+}
+
+.card-content {
+    padding: 24px;
+}
+
+.event-calendar .card h3 {
+    margin-top: 0;
+    color: #1b595e;
+}
+
+.event-calendar .card p {
+    margin-bottom: 0;
+}
+
+.event-calendar .card.description {
+    flex-basis: 100%;
+}
+
+.event-calendar .card.registration {
+    text-align: center;
+}
+
+.event-calendar .card.registration .form-button {
+    margin-top: 24px;
+}
+
+
+.selected-event .card-content {
+    padding: 0px;
+}
+
+/* Participant status: Tentative */
+.participant-status-tentative {
+    color: gray;
+}
+
+/* Participant status: Confirmed */
+.participant-status-confirmed {
+    color: green;
+}
+
+/* Participant status: Declined */
+.participant-status-declined {
+    color: red;
+}
+
+.selected-event {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

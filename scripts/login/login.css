@@ -1,0 +1,23 @@
+
+.form-login.visible {
+    display: block;
+}
+.error-message {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 120%;
+    font-weight: bold; 
+}
+
+.form-login .parameters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 32px;
+}
+
+@media (max-width: 650px) {
+    .form-login .parameters {
+        grid-template-columns: 1fr;
+    }
+}

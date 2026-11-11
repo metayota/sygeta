@@ -1,0 +1,28 @@
+<div class="sync-resources">
+    <h1><?= translate('synchronize_resources') ?></h1>
+    <p><?= translate('synchronize_resources_description') ?></p>
+    <when test="{router$.attributes.subpage}" then="this.subpage = value"></when>
+    <dropdown (change)="this.chooseRepository(event)" options="{this.repositoryOptions}" value="{this.repository}"></dropdown>
+    <p><a (click)="this.addRepository()">Add repository...</a></p>
+    <table if="this.resources && this.resources.length > 0" class="table">
+        <thead>
+            <tr>
+                <th><?= translate('name') ?></th>
+                <th><?= translate('version') ?></th>
+                <th><?= translate('remote_version') ?></th>
+                <th><?= translate('status') ?></th>
+                <th><?= translate('actions') ?></th>
+            </tr>
+        </thead>
+        <tbody for="resource of this.resources">
+            <tr class="{resource.status == 'different' ? 'resource-updated' : ''}">
+                <td>{resource.name}</td>
+                <td>{resource.version}</td>
+                <td>{resource.remote_version}</td>
+                <td><span if="resource.status != 'different'">{resource.status}</span> <a if="resource.status == 'different'" link="/editor/compare-to-repository/{this.repository}/{resource.name}">different</a> </td>
+                <td><a (click)="this.syncSingleFile(resource.name)" if="resource.status == 'different'"><?= translate('update') ?></a><a (click)="this.syncSingleFile(resource.name)" if="resource.status == 'new'"><?= translate('download') ?></a></td>
+            </tr>
+        </tbody>
+    </table>
+    <form.button (click)="this.updateFromServer()" label="<?= translate('download_all_resources') ?>"></form.button>
+</div>

@@ -1,0 +1,7 @@
+<div class="object-view-parameter">
+    <div if="this.typeInfo != undefined">
+        <label if="this.showlabel !== false">{translate(this.parameter.title)}</label>
+        <div class="object-view-content"><include attributes="{ this.attributesForElement }" (change)="this.resourceChanged(event);" tag="{this.typeInfo.viewer}"></include></div>
+        <p if="this.documentation == true and this.attributesForElement['documentation']" class="documentation">{this.attributesForElement['documentation']}</p>
+    </div>
+</div>

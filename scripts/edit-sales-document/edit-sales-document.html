@@ -1,0 +1,27 @@
+<breadcrumbs></breadcrumbs>
+<div class="edit-sales-document">
+    <div class="title-with-action-buttons">
+        <h1>
+            <t>sales_document_editor_title</t>
+        </h1>
+        <div class="action-button-area"><button class="form-button"
+                (click)="router$.goto('/sales-document-detail-view/'+this.document?.id)">
+                <t>preview</t>
+            </button></div>
+    </div>
+    <div class="two-column-form">
+        <form.resource submitlabel="<t>save</t>" resourcetype="sales_document"
+            hide_parameters="{this.getHiddenParameters(this.documentType)}" value="{this.document}"
+            (submit)="this.save(event)">
+        </form.resource>
+    </div>
+
+    <div if="this.documentType?.has_line_items">
+        <edit-line-items element="lineItems" document_id="{this.document_id}" show_preview="{false}"></edit-line-items>
+    </div>
+
+    <div if="this.documentType?.custom_form">
+        <h1><t>additional_information</t></h1>
+        <form.resource submitlabel="<t>save</t>" (submit)="this.saveCustomForm(event)" value="{JSON.parse(this.document?.custom_form_data)}" resource_name="{this.documentType?.custom_form}"></form.resource>
+    </div>
+</div>

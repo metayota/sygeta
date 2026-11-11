@@ -1,0 +1,12 @@
+.participant-list > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 35px;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.participant-list > div:nth-child(odd) {
+    background: var(--component-color); 
+}
+

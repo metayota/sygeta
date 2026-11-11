@@ -1,0 +1,74 @@
+.app .invitation-links input, .app .invitation-links input[readonly] {
+    color: black;
+}
+
+.invitation-mail .message-preview textarea, .invitation-mail > .message-preview textarea {
+    height: 350px;
+}
+
+.invitation-mail .personal-message textarea, .invitation-mail .personal-message textarea {
+    height: 100px;
+}
+
+.already_invited td {
+    color: gray;
+}
+.invitation-bonus {
+    display:flex; 
+    margin-top: 30px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.invitation-bonus div {
+    text-align: center;
+    padding-right: 32px;
+    width:140px;
+}
+
+.invitation-bonus div:first-child {
+    padding-left: 0px;
+}
+
+.invitation-bonus img {
+    width: 80px;
+}
+
+.invitation-bonus p {
+    font-size: 21px;
+}
+
+.find-us-on {
+    position: relative;
+}
+
+.find-us-on img {
+    width: 325px;
+}
+
+.find-us-on p {
+    position: absolute;
+    top: 18px;
+    left: 120px;
+    font-weight: bold;
+}
+
+.invitation-addressbook table a {
+    margin-left: 10px;
+}
+
+.invitation-addressbook table .form-checkbox {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.share-buttons img {
+    width:80px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.app .social-media textarea {
+    height: 80px;
+}

@@ -1,0 +1,16 @@
+{
+  "tag": "div",
+  "name": "User-Administration",
+  "items": [
+    {
+      "tag": "database.table.editor",
+      "items": [],
+      "name": "Database Administrator",
+      "parameters": {
+        "resourcetype": "countries",
+        "table": "countries",
+        "show_description": true
+      }
+    }
+  ]
+}

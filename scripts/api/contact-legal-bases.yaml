@@ -1,0 +1,232 @@
+paths:
+
+  list:
+    get:
+      summary: Get all legal bases for a contact
+      tags: [Contact Legal Basis]
+      parameters:
+        - name: contact_id
+          in: path
+          required: true
+          schema: { type: integer }
+          description: Contact ID
+      responses:
+        "200":
+          description: List of legal bases
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/schemas/ContactLegalBasisDetail"
+              example:
+                - id: 1
+                  contact_id: 42
+                  source: "Contract Signature"
+                  legal_basis: 'contract'
+                  date: "2025-01-10T10:30:00Z"
+                  description: "Customer signed service agreement"
+                - id: 2
+                  contact_id: 42
+                  source: "Newsletter Signup"
+                  legal_basis: 'consent'
+                  date: "2025-01-15T14:20:00Z"
+                  description: "Opted in to marketing communications"
+        "404":
+          description: Contact not found
+
+    post:
+      summary: Create a new legal basis for a contact
+      tags: [Contact Legal Basis]
+      parameters:
+        - name: contact_id
+          in: path
+          required: true
+          schema: { type: integer }
+          description: Contact ID
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/schemas/ContactLegalBasisCreateRequest"
+            example:
+              source: "Contract Signature"
+              legal_basis_id: 3
+              date: "2025-01-10T10:30:00Z"
+              description: "Customer signed service agreement"
+      responses:
+        "200":
+          description: Legal basis created
+          content:
+            application/json:
+              schema:
+                $ref: "#/schemas/ContactLegalBasisResponse"
+              example:
+                id: 1
+                message: "Legal basis created successfully"
+        "404":
+          description: Contact not found
+
+  detail:
+    get:
+      summary: Get a specific legal basis for a contact
+      tags: [Contact Legal Basis]
+      parameters:
+        - name: contact_id
+          in: path
+          required: true
+          schema: { type: integer }
+          description: Contact ID
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+          description: Legal basis ID
+      responses:
+        "200":
+          description: Legal basis found
+          content:
+            application/json:
+              schema:
+                $ref: "#/schemas/ContactLegalBasisDetail"
+              example:
+                id: 1
+                contact_id: 42
+                source: "Contract Signature"
+                legal_basis_id: 3
+                date: "2025-01-10T10:30:00Z"
+                description: "Customer signed service agreement"
+        "404":
+          description: Legal basis not found
+
+    patch:
+      summary: Update a legal basis for a contact
+      tags: [Contact Legal Basis]
+      parameters:
+        - name: contact_id
+          in: path
+          required: true
+          schema: { type: integer }
+          description: Contact ID
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+          description: Legal basis ID
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/schemas/ContactLegalBasisUpdateRequest"
+            example:
+              description: "Updated: Customer renewed service agreement"
+      responses:
+        "200":
+          description: Legal basis updated
+          content:
+            application/json:
+              schema:
+                $ref: "#/schemas/ContactLegalBasisResponse"
+              example:
+                id: 1
+                message: "Legal basis updated successfully"
+        "404":
+          description: Legal basis not found
+
+    delete:
+      summary: Delete a legal basis for a contact
+      tags: [Contact Legal Basis]
+      parameters:
+        - name: contact_id
+          in: path
+          required: true
+          schema: { type: integer }
+          description: Contact ID
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+          description: Legal basis ID
+      responses:
+        "200":
+          description: Legal basis deleted
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Legal basis deleted successfully"
+        "404":
+          description: Legal basis not found
+
+
+schemas:
+
+  ContactLegalBasisCreateRequest:
+    type: object
+    required: [date]
+    properties:
+      source:
+        type: string
+        description: Source of the legal basis (e.g., contract, consent form)
+      legal_basis:
+        type: string
+        description: Reference to the name of the legal_basis table 
+        nullable: true
+      date:
+        type: string
+        format: date-time
+        description: Date when the legal basis was established
+      description:
+        type: string
+        description: Additional details about the legal basis
+
+  ContactLegalBasisUpdateRequest:
+    type: object
+    properties:
+      source:
+        type: string
+        description: Source of the legal basis
+      legal_basis:
+        type: string
+        description: Reference to the name of the legal_basis table 
+        nullable: true
+      date:
+        type: string
+        format: date-time
+        description: Date when the legal basis was established
+      description:
+        type: string
+        description: Additional details about the legal basis
+
+  ContactLegalBasisResponse:
+    type: object
+    properties:
+      id:
+        type: integer
+      message:
+        type: string
+
+  ContactLegalBasisDetail:
+    type: object
+    properties:
+      id:
+        type: integer
+      contact_id:
+        type: integer
+      source:
+        type: string
+        nullable: true
+      legal_basis:
+        type: string
+        nullable: true
+      date:
+        type: string
+        format: date-time
+      description:
+        type: string
+        nullable: true

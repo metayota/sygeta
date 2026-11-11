@@ -1,0 +1,19 @@
+nav>div {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    gap: 16px;
+    padding-right: 25px;
+}
+
+
+nav>div>img {
+    justify-self: flex-end;
+    max-width: 24px;
+    width: 24px;
+}
+
+nav>div.active>img {
+
+    opacity: 1;
+}

@@ -1,0 +1,4 @@
+<div class="form-text">
+    <label if="this.label !== undefined" class="form-label">{translate(this.label)}</label>
+    <input value="{this.value}" (input)="this.resourceChanged(node.value)" class="input-text form-element" element="autocomplete" placeholder="{this.placeholder}" type="text"/>
+</div>

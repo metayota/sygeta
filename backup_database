@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Get parent directory name (e.g. web739)
+DB_NAME="$(basename "$(dirname "$(pwd)")")"
+
+# Output file in current directory (html)
+OUTPUT_FILE="${DB_NAME}.sql"
+
+# Backup database
+mysqldump --single-transaction --routines --triggers "$DB_NAME" > "$OUTPUT_FILE"
+
+# Check result
+if [ $? -eq 0 ]; then
+    echo "Backup successful: $(pwd)/$OUTPUT_FILE"
+else
+    echo "Backup failed for database: $DB_NAME"
+    exit 1
+fi
+

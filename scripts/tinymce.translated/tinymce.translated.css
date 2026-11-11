@@ -1,0 +1,39 @@
+.form-tinymce-translated {
+    background-color: transparent;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.parameter-type-translated_formatted_string {
+    grid-column: 1 / span 2;
+}
+
+.form-tinymce-translated .form-label {
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-tinymce-translated.has-error .tox-tinymce {
+    border-color: #dc3545;
+}
+
+.form-tinymce-translated .error-message {
+    color: #dc3545;
+    font-size: 0.875em;
+    margin-top: 4px;
+    display: block;
+}
+
+.form-tinymce-translated .tox-tinymce {
+    border-radius: 6px;
+}
+
+.form-tinymce-translated .tox-editor-header {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.form-tinymce-translated .tox-edit-area {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}

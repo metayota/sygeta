@@ -1,0 +1,7 @@
+<?php namespace Metayota; include_once('../metayota/library.php');  
+include_once('../access-check/access-check.php');
+$id = $data['id'];
+checkWritePermissions('task', $id);
+$db->update('task', ['completed' => 1], ['id' => $data['id'],'user_id'=>$user_id]);
+success();
+?>

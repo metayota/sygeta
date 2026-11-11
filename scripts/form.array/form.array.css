@@ -1,0 +1,50 @@
+.form-array {
+    margin-top: 16px;
+}
+
+.form-array label {
+    margin-bottom: 4px;
+    display: block;
+}
+
+.form-array table {
+    margin-bottom: 16px;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.form-array table td, .form-array table th {
+    padding-left: 12px;
+    padding-right: 12px;
+    border: 1px solid #cfcfcf;
+}
+
+.tr-droparea.active {
+    color: white;
+    background: #4682e2;
+}
+
+.tr-droparea {
+    height: 15px;
+    width: 15px;
+}
+
+.form-array .object-view-parameter {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.form-array .form-button {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.action-icons {
+    padding: 0px;
+}
+
+.action-icons img {
+    cursor: pointer;
+width: 20px;
+    height: 20px;
+}

@@ -1,0 +1,9 @@
+.create-contact .parameters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.legal-basis .parameters > div:nth-child(2n), .legal-basis .parameters > div:nth-child(3n) {
+    grid-row: 2;
+}

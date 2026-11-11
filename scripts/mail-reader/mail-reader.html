@@ -1,0 +1,12 @@
+<div class="mail-reader">
+    <div class="mail-header">
+        <h2>{this.message.subject}</h2>
+        <div class="mail-meta">
+            <div>To: {this.message.receiver_mail}</div>
+            <div>Date: {this.formatDate(this.message.message_time)}</div>
+        </div>
+    </div>
+    <div class="mail-content">
+        <iframe element="mailFrame" class="mail-frame"></iframe>
+    </div>
+</div>

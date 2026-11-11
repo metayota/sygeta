@@ -1,0 +1,20 @@
+<div class="number-input-form-element form-box">
+    <label if="this.label !== undefined" class="form-label">{translate(this.label)}</label>
+    <input element="input" 
+        type="text" 
+        class="form-element field input number" 
+        name="{this.name}" 
+        value="{ this.formattedValue }" 
+        spellcheck="false" 
+        readonly="{this.readonly}"
+        (blur)="this.onBlur(node,event)"
+        (select)="this.correctSelection(node.value,node)"
+        (click)="this.correctSelection(node.value,node)"
+        (mousedown)="this.correctSelection(node.value,node)"
+        (keyup)="this.correctSelection(node.value,node)"
+        (focus)="this.correctSelection(node.value,node)"
+        (input)="this.valueToDisplayValue(node.value,node,false);  this.onChange(event, node.value)"
+        (keydown)="this.handleKeypress(node,node.value,event)"
+        (keypress)="this.correctSelection(node.value,node)"/>
+</div>
+<p class="error-message" if="!!this.errorMessage">{this.errorMessage}</p>

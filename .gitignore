@@ -1,0 +1,7 @@
+cache/
+node_modules/
+vendor/
+
+# Editor recovery files can contain credentials
+conf/.*.swp
+conf/.*.swo

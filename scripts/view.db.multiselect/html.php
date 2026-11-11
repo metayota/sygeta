@@ -1,0 +1,1 @@
+<?php namespace Metayota; include_once('../metayota/library.php');   include_once('../translation-service/translation-service.php');  ?><span>{(typeof this.value == 'array' ? this.value?.join(', ') : '')}</span>

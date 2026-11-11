@@ -1,0 +1,133 @@
+.form-element-container {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.dropdown {
+	width: auto;
+	
+	-webkit-user-select: none;
+    display: inline-block;
+}
+
+.dropdown label {
+    margin-bottom: 4px;
+    display: block;
+}
+
+.clear {
+	clear: both;
+}
+
+.default-option {
+	color: #A9A9A9;
+}
+
+
+
+.itemlist-container {
+	position: relative
+}
+
+.dropdown-form-element {
+	width: auto;
+	border: 1px solid black;
+	height: auto;
+	border-radius: 6px;
+	padding-left: 16px;
+	padding-right: 10px;
+	padding-top: 9px;
+	padding-bottom: 8px;
+	outline: 0;
+	cursor: pointer;
+    background: #f3f3f3;
+}
+
+.material .filter-form-element,
+.material .dropdown-form-element {
+    border: none;
+    background-color: transparent;
+}
+
+.material .dropdown,.material .dropdown-form-element {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.material .dropdown-down {
+    right: 13px;
+}
+
+.dropdown-form-element.focus {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom: 0px;
+}
+
+.dropdown-placeholder {
+	color: gray;
+}
+
+.dropdown-options {
+	z-index: 1010;
+	display: none;
+    width: auto;
+	top: 0px;
+	max-height: 250px;
+	position: absolute;
+	background: white;
+	border: 1px solid black;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	overflow-y: scroll;
+	cursor: pointer;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    min-width: calc(100% - 3px);
+}
+
+.dropdown-options-visible {
+	display: block;
+}
+
+.dropdown-option {
+	width: auto;
+	padding: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+    border: 1px solid transparent;
+    color: black;
+    white-space: nowrap;
+}
+
+.dropdown .dropdown-option:hover {
+	background: #f0f0f0;
+}
+
+.dropdown .dropdown-option.focus {
+	background: #2e88ce;
+	color: white;
+    
+}
+
+.dropdown-down {
+	float: right;
+	color: black;
+	margin-left: 16px;
+    position: relative;
+    top: -2px;
+}
+
+.dropdown-option.selected::before {
+	content: "✓ ";
+	color: #499BE7;
+}
+
+.dropdown-option.selected.focus::before {
+	content: "✓ ";
+	color: white;
+}
+
+.option-info {
+    color: #777;
+}

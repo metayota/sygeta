@@ -1,0 +1,2 @@
+<?php namespace Metayota; include_once('../metayota/library.php');   include_once('../translation-service/translation-service.php');  ?><breadcrumbs></breadcrumbs>
+<db.row.editor resourcetype="{this.resourcetype}" rowid="{this.rowid}"></db.row.editor>

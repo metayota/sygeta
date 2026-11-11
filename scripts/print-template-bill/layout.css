@@ -1,0 +1,389 @@
+body {
+    font-family: sans-serif;
+}
+
+
+body {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+@font-face {
+    font-family: 'Codec Pro';
+    src: url('/fonts/CodecProRegular/font.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    ascent-override: 110%;
+    /* Further increased */
+    descent-override: 40%;
+    /* Further decreased */
+    line-gap-override: 0%;
+}
+
+@font-face {
+    font-family: 'Codec Pro';
+    src: url('/fonts/CodecProBold/font.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+    ascent-override: 110%;
+    /* Further increased */
+    descent-override: 40%;
+    /* Further decreased */
+    line-gap-override: 0%;
+}
+
+
+body {
+    background-color: var(--component-color);
+    font-family: 'Codec Pro', sans-serif;
+    /*-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;*/
+}
+
+main {
+    padding: 32px;
+}
+
+.form-radio-container.form-box {
+    border: none;
+}
+
+.print-footer .page-number {
+    position: absolute;
+    top: -60px;
+    right: 0px;
+}
+
+@media print {
+
+    /* Reset margins and padding */
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    main {
+        padding: 0px !important;
+    }
+
+    body>div {
+        background-color: transparent;
+        box-sizing: border-box;
+    }
+
+
+    /* Hide elements not needed in print */
+    header,
+    footer,
+    .noprint {
+        display: none;
+    }
+
+    /* Adjust main content layout */
+    body main {
+        padding: 30px 150px;
+    }
+
+    body .app {
+        padding: 50px 50px;
+        padding-left: 120px;
+        padding-right: 120px;
+        width: 100%;
+        grid-template-columns: 1fr;
+        box-sizing: border-box;
+    }
+
+    body .two-column-form .parameters {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+
+
+    /* Style print header */
+    .print-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 1000;
+        display: grid;
+    }
+
+    .print-header>div:last-child {
+        text-align: right;
+    }
+
+    /* Style print footer */
+    .print-footer {
+        position: fixed;
+        bottom: -120px;
+        left: 0;
+        right: 0;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        z-index: 1000;
+        font-size: 11px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        line-height: 16px;
+    }
+
+
+    /* Ensure print header and footer are visible */
+    .print-header,
+    .print-footer {
+        display: block;
+        display: none;
+    }
+
+    /* Adjust body padding to prevent overlap */
+    body {
+        padding-top: 120px;
+        /* Matches header height */
+        padding-bottom: 120px;
+        /* Matches footer height */
+    }
+
+    /* Allow page breaks inside .app if content is too long */
+    .app {
+        break-inside: auto;
+        break-before: auto;
+        break-after: auto;
+    }
+
+    /* Adjust main content layout */
+    body main {
+        padding: 0;
+    }
+
+    body .app {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding: 0px;
+        width: 100%;
+        grid-template-columns: 1fr;
+        box-sizing: border-box;
+        margin: 0 auto;
+        /* Center the content */
+        max-width: 100%;
+        /* Ensure it doesn't exceed page width */
+    }
+
+    /* Adjust page margins */
+
+
+    /* Ensure content doesn't overlap with header/footer */
+    body {
+        padding-top: 60px;
+        /* Matches header height */
+        padding-bottom: 60px;
+        /* Matches footer height */
+    }
+
+    /* Adjust print header and footer */
+
+    .print-footer {
+        bottom: 0;
+        /* Adjust from -120px to 0 */
+    }
+
+    html {
+        background-color: transparent;
+    }
+
+    html body>div {
+        border: none;
+    }
+
+    html body {
+        padding: 0px;
+        border: none;
+        background-color: transparent;
+        border: none;
+    }
+
+    .property-detail .actions {
+        display: none;
+    }
+}
+
+.print-header {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    right: 30px;
+}
+
+.print-footer {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    right: 50px;
+}
+
+.print-header {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    display: flex;
+    justify-content: space-between;
+    left: 24.1mm;
+    right: 20mm;
+}
+
+.print-header .right-header {
+    text-align: right;
+}
+
+.print-footer {
+    position: absolute;
+    bottom: 40px;
+    left: 24.1mm;
+    right: 20mm;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.print-footer .right-footer {
+    text-align: right;
+}
+
+.right-footer .value {
+    text-align: right;
+}
+
+@font-face {
+    font-family: 'Meta Serif Pro';
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/MetaSerifPro-Bold.woff2') format('woff2'),
+        url('/fonts/MetaSerifPro-Bold.woff') format('woff'),
+        url('/fonts/MetaSerifPro-Bold.ttf') format('truetype');
+}
+
+h1 {
+    font-family: 'Meta Serif Pro', serif;
+
+}
+
+h1 {
+    margin-top: 30px;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    margin-top: 30px;
+    font-size: 2em;
+    margin-bottom: 0.4em;
+}
+
+h1+h2 {
+    margin-top: 0px;
+}
+
+h3 {
+    margin-top: 30px;
+}
+
+.no-page-break {
+    page-break-inside: avoid;
+}
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+}
+
+.icon-text {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+/* First two rows color */
+.form-readonly .parameters>div:nth-child(4n-3),
+.form-readonly .parameters>div:nth-child(4n-2) {
+    background-color: #efefef;
+}
+
+/* Next two rows color */
+.parameters>div:nth-child(4n-1),
+.parameters>div:nth-child(4n) {
+    background-color: #ffffff;
+}
+
+
+
+.form-readonly .parameters .object-view-parameter label {
+    text-decoration: underline;
+}
+
+
+body .form-readonly .object-view-parameter {
+    padding: 0px;
+    margin: 0px;
+
+
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+
+.form-readonly .parameters>div {
+    padding-left: 13px;
+}
+
+.form-readonly .parameters {
+    gap: 0px;
+}
+
+.page-mail-reader main.cards {
+
+    background-color: #e0e0e0;
+}
+
+.button-box {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    row-gap: 0px;
+    width: fit-content;
+}
+
+.label {
+    text-align: right;
+}
+
+.value {
+    text-align: left;
+}

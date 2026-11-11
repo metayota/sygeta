@@ -1,0 +1,1 @@
+<?php namespace Metayota; include_once('../metayota/library.php');  ?><database.table.editor resourcetype="mail_template" table="mail_template"></database.table.editor>

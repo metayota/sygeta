@@ -1,0 +1,83 @@
+.toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 430px;
+    z-index: 10000;
+}
+
+.toast-message {
+    background-color: #d1434d;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(176deg, #ba333c 0%, #d1434d 35%, rgb(209 67 77) 100%) border: 1px solid #a82931;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 2px #450f13;
+}
+
+span.toast-button {
+    margin: 10px;
+}
+
+.toast-message a,
+.toast-message a:link,
+.toast-message a:visited,
+.toast-message a:hover {
+    background-color: #213e5c;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    white-space: nowrap;
+    cursor: pointer;
+    font-weight: normal;
+    background: linear-gradient(2deg, rgb(52 77 106) 0%, rgb(64 91 119) 100%);
+    border: 1px solid rgb(39 62 88);
+    padding-left: 15px;
+    padding-right: 15px;
+    transition-property: top, left;
+    transition-duration: 0.3s;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.toast-message a:hover {
+    background-color: #c2a201;
+    background: linear-gradient(2deg, rgb(59, 86, 117) 0%, rgb(69, 102, 137) 100%);
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.toast-message a:active {
+    position: relative;
+    top: 2px;
+    left: 2px;
+    background: linear-gradient(2deg, rgb(77, 107, 141) 0%, rgb(85, 122, 162) 100%);
+}
+
+.toast-message span {
+    flex-grow: 1;
+
+    margin-right: 10px;
+}
+
+.toast-message.success {
+    background-color: #15a84b;
+    background: linear-gradient(178deg, #17be54 0%, #15a84b 100%);
+    border: 1px solid #109240;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 2px #033e18;
+}
+/*
+.toast-message.success a {
+    background: #033e18;
+    border: 1px solid #033012;
+}*/

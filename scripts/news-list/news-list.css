@@ -1,0 +1,38 @@
+.news-list {
+
+  padding-top: 0px;
+}
+
+.news-list h2 {
+    margin-top: -13px;
+}
+
+.news-item {
+  background-color: var(--component-color);
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.news-item h3 {
+  margin-top: 0;
+}
+
+.news-item .teaser {
+  color: #666;
+}
+
+.news-item .meta {
+  color: #999;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.news-item .read-more {
+  text-decoration: none;
+}
+
+.news-item .read-more:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,13 @@
+<div class="home page">
+
+    <canvas style="margin-left:-57px;width:calc(100% + 107px)" class="icon-canvas" element="canvas"></canvas>
+
+    <!--div class="icon-dashboard" for="menu_item of this.menu">
+        <div (click)="this.clickedItem(menu_item)"> <div class="iconbox"><img src="/uploads/menu-icons/{menu_item.icon}"></div> <a
+                (click)="this.clickedItem(menu_item)">{menu_item.title_translated}</a></div>
+    </div-->
+
+    <div if="!window.loggedInUser$?.id">
+        <login></login>
+    </div>
+</div>

@@ -1,0 +1,2 @@
+<?php namespace Metayota; include_once('../metayota/library.php');   include_once('../translation-service/translation-service.php');  ?><h1><t>mark_deal_lost_title</t></h1>
+<form.resource submitlabel="<?= htmlentities(translate('mark_as_lost_btn')) ?>" resource_name="lost-deal" (submit)="this.markAsLost(event)"></form.resource>

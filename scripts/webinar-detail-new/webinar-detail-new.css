@@ -1,0 +1,90 @@
+.webinar-detail {
+  border-radius: 4px;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+}
+
+.webinar-detail .mdc-card__primary-action {
+  display: flex;
+  flex-direction: column;
+}
+
+.webinar-detail .mdc-card__media {
+  background-size: cover;
+  background-position: center;
+  height: 0;
+}
+
+.webinar-detail .webinar-content {
+  padding: 16px;
+}
+
+.webinar-detail .mdc-typography--headline4 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.webinar-detail .mdc-typography--subtitle1 {
+  margin: 8px 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.webinar-detail .mdc-typography--body1 {
+  margin: 8px 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.webinar-detail .webinar-meta {
+  margin-top: 16px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.webinar-detail .mdc-card__actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px;
+}
+
+.webinar-detail .mdc-card__action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.webinar-detail .mdc-button {
+  --mdc-theme-primary: #6200ee;
+  --mdc-theme-on-primary: white;
+  --mdc-theme-secondary: #018786;
+  --mdc-theme-on-secondary: white;
+  --mdc-button-outline-color: #6200ee;
+}
+
+.webinar-detail .mdc-button:hover {
+  --mdc-theme-primary: #3700b3;
+  --mdc-theme-secondary: #00695c;
+}
+
+.webinar-detail .mdc-card__media {
+  background-size: cover;
+}
+
+.webinar-detail .webinar-content {
+  padding: 16px;
+}
+
+.webinar-detail .webinar-meta {
+  margin-top: 16px;
+}
+
+.webinar-detail .mdc-card__actions {
+  justify-content: flex-end;
+}

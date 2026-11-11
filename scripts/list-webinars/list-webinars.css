@@ -1,0 +1,28 @@
+.webinar-list {
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.webinar-list .mdc-card__primary-action {
+  display: flex;
+  flex-direction: column;
+}
+.webinar-list .mdc-card__media {
+  background-size: cover;
+  background-position: center;
+  height: 0;
+  
+}
+
+.webinar-list .webinar-content {
+  padding: 16px;
+}
+
+
+.webinar-list .webinar-content {
+  padding: 16px;
+}
+
+.webinar-list .mdc-card__actions {
+  justify-content: flex-end;
+}

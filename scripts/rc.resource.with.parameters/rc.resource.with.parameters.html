@@ -1,0 +1,11 @@
+<div>
+    <fieldset>
+        <legend>{this.label}</legend>
+        <div if="!!this.display_resource_type">
+            <form.tagtype value="{this.resourcetype}" (change)="this.resourceTypeChanged(event)" typefilter="{this.typefilter}"></form.tagtype>
+        </div>
+        <div if="this.resourcetype != undefined">
+            <form.resource (change)="this.resourceOptionsChanged(event)" resourcetype="{this.resourcetype}" value="{this.options}"></form.resource>
+        </div>
+    </fieldset>
+</div>

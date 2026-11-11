@@ -1,0 +1,20 @@
+.amount.commission {
+  color: #28a745; /* Green for positive */
+  font-weight: bold;
+}
+
+.amount.payout {
+  color: #dc3545; /* Red for negative */
+  font-weight: bold;
+}
+
+tr.commission {
+  background-color: #f8fff8;
+}
+
+tr.payout {
+  background-color: #fff8f8;
+}
+
+
+

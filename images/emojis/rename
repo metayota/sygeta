@@ -1,0 +1,12 @@
+#!/bin/bash
+# Navigate to the directory containing the files
+cd /var/www/web670/html/images/emojis
+
+# Loop through all files in the directory
+for file in *; do
+  # Replace newline characters with nothing (i.e., remove them)
+  newfile=$(echo "$file" | tr -d '\n')
+  # Rename the file
+  mv "$file" "$newfile"
+done
+

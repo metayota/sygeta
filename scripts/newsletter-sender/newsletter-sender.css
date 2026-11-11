@@ -1,0 +1,14 @@
+.newsletter-preview {
+    border: 1px solid gray;
+}
+
+.newsletter-preview-subject, .newsletter-preview-message {
+    padding: 20px;
+}
+
+.newsletter-preview-subject {
+    font-size: 120%;
+    font-weight: bold;
+    padding-bottom: 0px;
+    text-decoration: underline;
+}

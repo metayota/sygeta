@@ -1,0 +1,15 @@
+
+.customer-detail .tab-container {
+    margin-bottom: 20px;
+    margin-top: 16PX;
+}
+
+.action-buttons {
+    
+}
+
+.customer-detail h1.main-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

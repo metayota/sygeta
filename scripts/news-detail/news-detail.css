@@ -1,0 +1,22 @@
+.news-detail {
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.news-detail p.teaser {
+    font-size: 23px;
+}
+
+.news-detail h2 {
+  margin-top: 0;
+}
+
+.news-detail .meta {
+  color: #999;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.news-detail .text {
+  line-height: 1.6;
+}

@@ -1,0 +1,5 @@
+<div class="paginator" if="!!this.pages && this.pages.length > 1">
+    <div class="pages" for="page of this.pages">
+        <a class="{page.number == this.page ? 'current-page' : ''}" (click)="this.pageChanged(page.number)">{page.text}</a>
+    </div>
+</div>

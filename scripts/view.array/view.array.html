@@ -1,0 +1,16 @@
+<div class="view-array">
+    <label if="this.label !== undefined" class="form-label">{this.label}</label>
+    <p if="this.value.length === 0 && this.resource != undefined"><text name="array.noitems.{this.resource.name}"></text></p>
+    <table if="this.value.length > 0" class="table">
+        <thead>
+            <tr if="this.resource != undefined" for="parameter of this.resource.parameters">
+                <th>{translate(parameter.title)}</td>
+            </tr>
+        </thead>
+        <tbody for="item of this.value">
+            <tr if="this.resource != undefined" for="parameter of this.resource.parameters">
+                <td><object.viewparameter showlabel="{false}" parameter="{parameter}" value="{item[parameter.name]}"></object.viewparameter></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

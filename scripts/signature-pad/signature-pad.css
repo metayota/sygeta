@@ -1,0 +1,11 @@
+.signature-canvas {
+    width: 100%;
+    height: 150px;
+}
+
+.signature-buttons {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+}

@@ -1,0 +1,16 @@
+<div class="j-db-table">
+    <h3 if="this.label != undefined">{this.label}</h3>
+    <table if="this.objs and this.objs.length > 0" class="table">
+        <thead>
+            <tr if="this.resource != undefined" for="parameter of this.resource.parameters">
+                <th>{parameter.title}</th>
+            </tr>
+        </thead>
+        <tbody for="obj of this.objs">
+            <tr if="this.resource != undefined" for="parameter of this.resource.parameters">
+                <td><object.viewparameter showlabel="{false}" parameter="{parameter}" value="{obj[parameter.name]}"></object.viewparameter></td>
+            </tr>
+        </tbody>
+    </table>
+    <p if="this.objs and this.objs.length == 0"><t>no_items_available</t></p>
+</div>

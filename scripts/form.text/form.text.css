@@ -1,0 +1,53 @@
+.form-text {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: white;
+}
+
+.form-text input {
+    color: black;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    height: auto;
+    border-radius: 6px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    outline: 0;
+    cursor: pointer;
+    background: #f3f3f3;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.form-text input[readonly] {
+    color: #777;
+}
+
+.form-text input::placeholder, .form-text input:focus::placeholder, .form-text input:active::placeholder {
+    color: #929292;
+}
+
+input.input-text.form-element::placeholder {
+    color: #929292;
+}
+/*
+.form-text input:focus::placeholder,
+.form-text input:focus::-webkit-input-placeholder,
+.form-text input:focus::-ms-input-placeholder {
+    color: white !important;
+}*/
+
+.form-text label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.material .form-text label {
+    margin-bottom: 0px;
+}
